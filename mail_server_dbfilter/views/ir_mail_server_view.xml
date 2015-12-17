@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="ir_mail_server_form_inherit_dbfilter" model="ir.ui.view">
+            <field name="name">ir.mail_server.form.inherit.dbfilter</field>
+            <field name="model">ir.mail_server</field>
+            <field name="inherit_id" ref="base.ir_mail_server_form"/>
+            <field name="arch" type="xml">
+                <field name="sequence" position="after">
+                    <field name="dbfilter"/>
+                    <field name="is_server_active"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="ir_mail_server_list_inherit_dbfilter" model="ir.ui.view">
+            <field name="name">ir.mail_server.list.inherit.filter</field>
+            <field name="model">ir.mail_server</field>
+            <field name="inherit_id" ref="base.ir_mail_server_list"/>
+            <field name="arch" type="xml">
+                <field name="smtp_encryption" position="after">
+                    <field name="is_server_active"/>
+                    <field name="dbfilter"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

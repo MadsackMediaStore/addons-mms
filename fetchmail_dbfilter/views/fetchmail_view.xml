@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_email_server_form_inherit_dbfilter" model="ir.ui.view">
+            <field name="name">fetchmail.server.form.inherit.dbfilter</field>
+            <field name="model">fetchmail.server</field>
+            <field name="inherit_id" ref="fetchmail.view_email_server_form"/>
+            <field name="arch" type="xml">
+                <field name="date" position="after">
+                    <field name="dbfilter"/>
+                    <field name="is_server_active"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_email_server_tree_inherit_dbfilter" model="ir.ui.view">
+            <field name="name">fetchmail.server.list.inherit.dbfilter</field>
+            <field name="model">fetchmail.server</field>
+            <field name="inherit_id" ref="fetchmail.view_email_server_tree"/>
+            <field name="arch" type="xml">
+                <field name="state" position="after">
+                    <field name="is_server_active"/>
+                    <field name="dbfilter"/>
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

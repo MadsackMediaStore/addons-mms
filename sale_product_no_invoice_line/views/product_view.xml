@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_product_sale_to_contract_inherit" model="ir.ui.view">
+            <field name="name">product.template.sale_product_no_invoice_line.form.inherit</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
+                <field name="list_price" position="after">
+                    <field name="disable_create_invoice_line_from_so" />
+                </field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

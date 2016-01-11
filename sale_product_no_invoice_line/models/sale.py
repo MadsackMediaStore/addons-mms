@@ -20,7 +20,6 @@
 ##############################################################################
 
 from openerp import models, api
-import pdb
 
 class SaleOrderLine(models.Model):
     _name = "sale.order.line"
@@ -28,7 +27,6 @@ class SaleOrderLine(models.Model):
 
     @api.model
     def _prepare_order_line_invoice_line(self, line, account_id=False):
-        pdb.set_trace()
         if line and line.product_id and line.product_id.disable_create_invoice_line_from_so:
             return {}
 
